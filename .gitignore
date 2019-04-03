@@ -105,4 +105,11 @@ venv.bak/
 
 # Config file
 
-config.yml
+config/*
+!config/config.example.yml
+!config/config.docker.yml
+
+# Logs
+
+logs/*
+!logs/.gitkeep

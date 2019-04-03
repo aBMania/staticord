@@ -1,0 +1,8 @@
+db:
+    host: postgres # Managed by docker-compose
+    user: postgres
+    password: password
+    db: staticord
+bot:
+    prefix: '!'
+    token: 'token'

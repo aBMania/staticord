@@ -1,0 +1,8 @@
+db:
+    host: localhost
+    user: postgres
+    password: password
+    db: staticord
+bot:
+    prefix: '!'
+    token: 'token'
