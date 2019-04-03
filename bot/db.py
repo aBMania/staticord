@@ -133,7 +133,9 @@ class Db:
         n_max_try = 3
         wait_time = 1  # in seconds
 
-        while not self.pool or n_try < n_max_try:
+        while not self.pool and n_try < n_max_try:
+            n_try += 1
+
             try:
                 self.pool = await asyncpg.create_pool(host=self.config['db']['host'],
                                                       user=self.config['db']['user'],
