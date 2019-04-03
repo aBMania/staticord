@@ -145,6 +145,7 @@ class Db:
                 if n_try < n_max_try:
                     break
                 else:
+                    logger.error('Max number of connection tries attempted, exiting')
                     raise err
 
         logger.debug('Connected to database')

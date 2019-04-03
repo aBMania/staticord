@@ -17,7 +17,9 @@ from quiadit import QuiADit
 from scrapper import Scrapper
 
 logging.getLogger('discord').setLevel(logging.INFO)
-logging.getLogger('db').setLevel(logging.INFO)
+logging.getLogger('db').setLevel(logging.DEBUG)
+logging.getLogger('quiadit').setLevel(logging.DEBUG)
+logging.getLogger('scrapper').setLevel(logging.DEBUG)
 
 root_logger = logging.getLogger()
 root_logger.setLevel(logging.INFO)
