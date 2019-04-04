@@ -32,7 +32,7 @@ class QuiADit(commands.Cog):
 
         for member_emoji in member_emojis:
             emoji_of_member = [e for e in all_emojis if e.name == member_emoji['emoji']]
-            emoji_of_member = emoji_of_member[0] if not emoji_of_member else member_emoji['emoji']
+            emoji_of_member = emoji_of_member[0] if emoji_of_member else member_emoji['emoji']
             member_emoji['object'] = emoji_of_member
 
         # a list of messages to delete when we're all done
