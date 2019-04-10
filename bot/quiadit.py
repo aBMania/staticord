@@ -53,7 +53,10 @@ class QuiADit(commands.Cog):
                 f'\n**-------------------------------------------**')
 
             for emoji in member_emojis:
-                self.bot.loop.create_task(await question_message.add_reaction(emoji['object']))
+                try:
+                    self.bot.loop.create_task(await question_message.add_reaction(emoji['object']))
+                except discord.DiscordException as err:
+                    logger.error('Error while adding reaction %s: %s', emoji['object'], err)
 
             losers = []
 

@@ -105,7 +105,7 @@ SELECT
   m.id,
   me.emoji
 FROM staticord.message msg
-JOIN staticord.member m on m.id = msg.user_id
+JOIN staticord.member m on m.id = msg.user_id and m.guild = msg.guild
 JOIN staticord.member_emoji me on me.member = m.id
 WHERE m.guild = $1
    AND length(msg.content) > $2
