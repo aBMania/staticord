@@ -40,7 +40,7 @@ class QuiADit(commands.Cog):
         i = 0
         for q in questions:
             i = i + 1
-            question = q['content']
+            question = q['content'].replace("@","@ ")
             answer = q['emoji']
             answer_name = q['name']
 
